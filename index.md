@@ -21,7 +21,7 @@ The concept is to combine a combination of a few AI techniques adapted that take
 ### Behavioral Tree AI
 This AI technique is used the most, and if your not entirely sure of how behavior tree AI works you should go to [AIGameDev](http://aigamedev.com/open/article/bt-overview/) and get some basic understanding of Behavior Tree AI and how it works.  It's simular to how Decision Making AI works, but much more complex and more logic friendly.  
 
-How it is used in the designing of the AI system is that it will be utilitizing all of the decision making logics.  Each "tree" made up will be a specific logical choice that a specific creature or non-playable character (npc) can interact/function.  These are automatically grouped by the "Genetic Systematic Markup", which will be explained a little more below.
+How it is used in the designing of the AI system is that it will be utilitizing all of the decision making logics.  Each "tree" made up will be a specific logical choice that a specific creature or non-playable character (npc) can interact/function.  These are automatically grouped by the "Universal Systematic AI", which will be explained a little more below.
 
 
 ### Behavioral Sensory System
