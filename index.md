@@ -286,4 +286,4 @@ Compiled behavioral tree would simply be instructed by the simulation.  Each cre
 ## Other Notes
 The core system of the AI will be a factory like system for modular purposes.   This is mainly for the purpose of being able to switch/change AI engines for backwards compatability
 
-**Last updated on 6/1/2017 @ 7:59PM PST**
+**Last updated on 6/2/2017 @ 12:16PM PST**
