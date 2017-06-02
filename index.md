@@ -1,3 +1,45 @@
+## Milestones
+
+#### Phrase I
+ * Modify the Eco Server Code, to create new "Factory Like" for purpose of modular.  In this case "IAIEngine", pull request purpose
+ * Create a new "Default AI Engine" that is the "Current Eco AI"
+
+#### Phase II
+ * Implement Behavior Tree AI
+ * Implement Base AI Sensory/Behavioral Component System
+ * Implement Neural Network
+ * Implement Base Universal Systematic Code Structure
+ * Implement Base Personality Traits
+ * Implement Base Food Chain
+ 
+#### Phase III
+ * New Behavior Tree Editor in Angular2
+ * Neural Network Editor in Angular2
+ * All XML to Compiled Code Compiler 
+ * * Behavior Tree
+ * * Neural Network 
+ * * Personality Traits
+ * * Food Chains 
+ * Universal Systematic Code Editor (Config editor) in Angular2
+ 
+#### Phase IV
+* Create Sight Sensory Component 
+* Create Smell Sensory Component
+* Create Hearing Sensory Component
+* Create Touch Sensory Component
+* Create Taste Sensory Component
+* Create Pain Sensory Component
+* Create Balance / Acceleration Sensory Component
+* Create Temperature Sensory Component
+* Create Light Sensory Component
+* Create Growth Behavior Component
+
+#### Phase V
+* Optimization Improvements
+* Implementation of All Animals
+* Implementation of All Trees
+* Final Touchups
+
 ## Introduction
 
 The concept is to combine a combination of a few AI techniques adapted that takes the best of each and builds a system that can be fully functional.  This is broken into three parts.  The techinques mostly used is behavioral tree AI
@@ -10,10 +52,10 @@ The concept is to combine a combination of a few AI techniques adapted that take
 
 ##### Techniques Adapted:
  * Behavioral Tree AI
- * Behavioral Sensory System
+ * Sensory/Behavioral System
  * Neural Network (Basic)
  * Universal Systematic AI
- * Personaility Traits
+ * Personality Traits
  * Food Chain
 
 ## Techniques
@@ -24,7 +66,7 @@ This AI technique is used the most, and if your not entirely sure of how behavio
 How it is used in the designing of the AI system is that it will be utilitizing all of the decision making logics.  Each "tree" made up will be a specific logical choice that a specific creature or non-playable character (npc) can interact/function.  These are automatically grouped by the "Universal Systematic AI", which will be explained a little more below.
 
 
-### Behavioral Sensory System
+### Sensory/Behavioral Component System
 This is not really an AI technique but it is a technique regardless.  The concept behind this is that it behaves as the input/output that can be translated into choices based on the creature/non-playable character (npc).  
 
 Each NPC will have a central "Brain" that forms as a Neural Network and communicates between the different sensory parts of the NPC.  Yes this requires specification of where each sensory component must be assosicated with, and what sensory do they have.
@@ -48,6 +90,11 @@ The following sensory components are listed below:
 * **Infrared Sensory Component**: Provides input for detecting heat, used mostly in snakes or reptiles.  So this would require body like tempature of Players giving heat.  Same with other NPC etc.
 
 Keep in mind that not all of these sensory components would be implemented right away.  They would be as we need them.  But the nice thing is having these input broken into sensory components allow a concept of plug and play.  Add a new bird, attach all of their sensory components they need, and those inputs will automatically feed the neural network what it should do when specific inputs are met.  The outputs would determine a specific behavior that should be done when that output occurs.
+
+The following behavioral components are listed below:
+* **Growth Behavior Component**:  Provides Instructions on how an NPC should grow, this can be either for animals/plants etc.
+
+Will add more behavioral components later
 
 ### Neural Network (Basic)
 To keep it simple, the neural network behaves an interpreter on how to take the sensory components and translate it to specific output behaviors.  Not to be confused with "Machine Learning" as that is mostly what neural network is for.  But in this case we use it to determine specific correct behavioral output expected.
@@ -87,7 +134,7 @@ Everything between "Domain Code" to "Sub-Species Code" can be explained by going
 * Version = 8 bits (1 byte)
 * Machine Code = 8 bits (1 byte) - *Machine Code represents the type of machine it is (mainframe, drone, droid)*
 * Neural Network Code = 64 bits (8 bytes) - *Neural Network Code represents the parent of the code, such if it is a mainframe it has no code therefore 0, otherwise drone/droid will be linked to the mainframe's identtiy code*
-* Neural Code = 8 bits (1 byte) - *Neural Code is simular to the DNA Code, the code basically the unique pattern of how the machine thinks, this gives each mainframe different types of personalitlies, these are simple bitflags of what the Machine can and cannot do*
+* Neural Code = 8 bits (1 byte) - *Neural Code is simular to the DNA Code, the code basically the unique pattern of how the machine thinks, this gives each mainframe different types of personalities, these are simple bitflags of what the Machine can and cannot do*
 
 ***Note: The organism genetic code of each value is a unique representation based on an static list that would be managed of course as needed.  @see below: Taxonomy List below***
 
@@ -204,20 +251,20 @@ Subspecies:		None (0)
 
 Based on these information we can create specific behavioral structure that would make up this pattern.
 
-### Personaility Traits
-There would be specific personaility traits that would form basic instructions of how a specific npc should behave.  Should I hunt?  Am I hunted?  Do I run from those who hunt me?  Am I fearless?  Do I like this?  Do I like that?  What I hate?  What is my favorite food?  Etc.  All of these will determine specific behavioral markups that would be simply injected into a specific systematic code.  
+### Personality Traits
+There would be specific personality traits that would form basic instructions of how a specific npc should behave.  Should I hunt?  Am I hunted?  Do I run from those who hunt me?  Am I fearless?  Do I like this?  Do I like that?  What I hate?  What is my favorite food?  Etc.  All of these will determine specific behavioral markups that would be simply injected into a specific systematic code.  
 
 ### Food Chain
 Based on specific creatures we can categorize them in specific food chains, the concept of predator will be based on this.  Think of it this way.  Fox are often hunted by coyotes (not in ECO currently) but they will often kill them.  
 
-So if a organism is higher in the food chain it can and will probably run away.  Now it also depends on the type of creature it is.  For example wolves are scared of humans in general, they wouldn't go after a human normally.   There is often whereas if your alone by yourself and the pack of wolves out pack you, they will and might go after you.  But ultimately this will be based on the personalility of the individual wolf as well as a pack personaility traits.
+So if a organism is higher in the food chain it can and will probably run away.  Now it also depends on the type of creature it is.  For example wolves are scared of humans in general, they wouldn't go after a human normally.   There is often whereas if your alone by yourself and the pack of wolves out pack you, they will and might go after you.  But ultimately this will be based on the personality of the individual wolf as well as a pack personality traits.
 
 #### Example of the data above:
 Wolves would consist the 5 primary senses,  their genetic systematic markup code signifies that they have heighten senses in sight, smell, hearing, taste and touch.  They would also contain senses in pain, temperature, balance/acceletration, and gravity senses.  Now how we would interprate that information is based on the Systematic Code of Wolf.
 
 First of all we know that wolves are animals, and it's from the phylum of Chordata which means "with a cord", thus spine/backbone, some fishes are part of this phylum but not all of them.  It is part of the class "Mammalia" which to be blunt "Mammal" thus their youngs are given birth from the womb.  They are from the order of Carnivora, this order specification we can actually use to determine that this is a meat-eating organism.  This doesn't mean it has predatory insincts or anything.  The suborder Caniformia, means that the organism has a long snout, such as the wolf does have.  We can consider this "Long snout" concept as heighten sense of smell.  The Canidae specifics lineage of carnivorans that includes domestic dogs, wolves, foxes, jackals, dingoes, and many other extant and extinct dog-like mammals.  Where the Genus is Canis, containing multiple extant species, such as wolves, dogs and coyotes. Species of this genus are distinguished by their moderate to large size, their massive, well-developed skulls and dentition, long legs, and comparatively short ears and tails.
 
-We can formulate a base personaility traits for the wolf by the specific systematic code pattern.  For example.  With the Carnivora order we can know that we can include all personaility traits that makes the creature effectively a meat eating organism.  Now it does not provide the specific instructions of how they should hunt, but it will give them the concept that they like meat.
+We can formulate a base personality traits for the wolf by the specific systematic code pattern.  For example.  With the Carnivora order we can know that we can include all personality traits that makes the creature effectively a meat eating organism.  Now it does not provide the specific instructions of how they should hunt, but it will give them the concept that they like meat.
 
 With the species group we can determie what the type of food the "C. lupus" likes, well we know they like meat in general, but we also know that they would go after organisms that are lower in the food chain.  
 
@@ -239,4 +286,4 @@ Compiled behavioral tree would simply be instructed by the simulation.  Each cre
 ## Other Notes
 The core system of the AI will be a factory like system for modular purposes.   This is mainly for the purpose of being able to switch/change AI engines for backwards compatability
 
-**Last updated on 6/1/2017 @ 6:15PM**
+**Last updated on 6/1/2017 @ 7:59PM PST**
