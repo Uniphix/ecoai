@@ -221,8 +221,6 @@ We can formulate a base personaility traits for the wolf by the specific systema
 
 With the species group we can determie what the type of food the "C. lupus" likes, well we know they like meat in general, but we also know that they would go after organisms that are lower in the food chain.  
 
-
-
 ## Editing
 
 Behavioral tree works best with hierarchy specific like nodes.  So XML would be the best language that would allow editing behavior trees easily.  
@@ -235,3 +233,10 @@ The Behavioral tree would be compiled into auto-generated C# code using CodeDom 
 
 ## Simulation
 Compiled behavioral tree would simply be instructed by the simulation.  Each creature would have a set of referenced instructions in memory and only loads those actual conditions/actions as they come rather than loading all instructions into memory for each creature.  This allows not to load all behavioral instructions for each creature in the world.  Think of it this way, once the input/output pattern is found, it will then grab the behavioral instructions and process them, once done it will release it from memory.  However there is caching involved, so it will only release it after *n* amount of time.  So if a specific instruction is used multiple times within a call it will reuse it until it no longer needs to.
+
+
+
+## Other Notes
+The core system of the AI will be a factory like system for modular purposes.   This is mainly for the purpose of being able to switch/change AI engines for backwards compatability
+
+**Last updated on 6/1/2017 @ 6:15PM**
