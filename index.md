@@ -1,8 +1,8 @@
 ## Milestones
 
 #### Phrase I
- * Modify the Eco Server Code, to create new "Factory Like" for purpose of modular.  In this case "IAIEngine", pull request purpose
- * Create a new "Default AI Engine" that is the "Current Eco AI"
+ * ~~Modify the Eco Server Code, to create new "Factory Like" for purpose of modular.  In this case "IAIEngine", pull request purpose~~
+ * ~~Create a new "Default AI Engine" that is the "Current Eco AI"~~
 
 #### Phase II
  * Implement Behavior Tree AI
